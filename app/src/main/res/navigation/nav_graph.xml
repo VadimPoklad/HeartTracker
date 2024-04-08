@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.pme.act.layouts.MainFragment"
+        android:label="Blood Prasure BPM Tracker "
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainFragment_to_AddFragment"
+            app:destination="@id/AddFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_historyFragment"
+            app:destination="@id/HistoryFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_StatisticFragment"
+            app:destination="@id/StatisticFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddFragment"
+        android:name="com.example.pme.act.layouts.AddFragment"
+        android:label="New Record"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/HistoryFragment"
+        android:name="com.example.pme.act.layouts.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/StatisticFragment"
+        android:name="com.example.pme.act.layouts.StatisticFragment"
+        android:label="Statistic"
+        tools:layout="@layout/fragment_statistic" />
+</navigation>
